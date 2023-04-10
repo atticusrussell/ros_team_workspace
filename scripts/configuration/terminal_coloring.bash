@@ -127,8 +127,8 @@ function parse_ros_workspace {
 
 # Version with git color
 user="\[\e]0;$(parse_ros_workspace)\a\]\[${TERMINAL_COLOR_LIGHT_GREEN}\]\u"
-at="\[\[${TERMINAL_COLOR_LIGHT_GRAY}\]@"
-host="\[\[${TERMINAL_COLOR_BROWN}\]\h"
+at="\[${TERMINAL_COLOR_LIGHT_GRAY}\]@"
+host="\[${TERMINAL_COLOR_BROWN}\]\h"
 text="\[\[${TERMINAL_COLOR_YELLOW}\]${text}"
 colon="\[\[${TERMINAL_COLOR_LIGHT_GRAY}\]:"
 ros_ws="\[$(set_ros_workspace_color)\]$(parse_ros_workspace)"
