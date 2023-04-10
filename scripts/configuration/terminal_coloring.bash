@@ -134,8 +134,8 @@ colon="\[${TERMINAL_COLOR_LIGHT_GRAY}\]:"
 ros_ws="\[$(set_ros_workspace_color)\]$(parse_ros_workspace)"
 gitb="\[${TERMINAL_COLOR_GREEN}\]$(parse_git_bracket)\[$(set_git_color)\]$(get_gitbranch)\[${TERMINAL_COLOR_GREEN}\]>"
 workspace="\[${TERMINAL_COLOR_LIGHT_PURPLE}\]\W"
-dollarsign="\[\[${TERMINAL_COLOR_LIGHT_PURPLE}\]$"
-typehere="\[\[${TERMINAL_COLOR_NC}\] "
+dollarsign=" \[${TERMINAL_COLOR_LIGHT_BLUE}\]$"
+typehere="\[${TERMINAL_COLOR_NC}\] "
 export PS1="${user}${at}${host}${text}${colon}${ros_ws}${gitb}${workspace}${dollarsign}${typehere}"
 
 
