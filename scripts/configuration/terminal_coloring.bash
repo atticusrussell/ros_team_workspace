@@ -93,7 +93,7 @@ function parse_git_branch_and_add_brackets {
   gitbranch="$(get_gitbranch)"
 
   if [[ "$gitbranch" != '' ]]; then
-    echo "<${gitbranch}"
+    echo "<${gitbranch}>"
 #   else
 #     echo "<no-git-branch"
   fi
@@ -132,11 +132,12 @@ host="\[${TERMINAL_COLOR_BROWN}\]\h"
 text="\[${TERMINAL_COLOR_YELLOW}\]${text}"
 colon="\[${TERMINAL_COLOR_LIGHT_GRAY}\]:"
 ros_ws="\[$(set_ros_workspace_color)\]$(parse_ros_workspace)"
-gitb="\[${TERMINAL_COLOR_GREEN}\]$(parse_git_bracket)\[$(set_git_color)\]$(get_gitbranch)\[${TERMINAL_COLOR_GREEN}\]>"
-workspace="\[${TERMINAL_COLOR_LIGHT_PURPLE}\]\W"
-dollarsign=" \[${TERMINAL_COLOR_LIGHT_BLUE}\]$"
+gitb="\[${TERMINAL_COLOR_GREEN}\]$(parse_git_bracket)\[$(set_git_color)\]$(get_gitbranch)\[${TERMINAL_COLOR_GREEN}\]"
+workspace="\[${TERMINAL_COLOR_LIGHT_PURPLE}\]\w"
+dollarsign=" \[${TERMINAL_COLOR_CYAN}\]$"
 typehere="\[${TERMINAL_COLOR_NC}\] "
-export PS1="${user}${at}${host}${text}${colon}${ros_ws}${gitb}${workspace}${dollarsign}${typehere}"
 
+# if [[ "$(get_gitbranch)" != '' ]]; then
+export PS1="${user}${at}${host}${text}${colon}${ros_ws}${gitb}${workspace}\n${dollarsign}${typehere}"
 
 # END: Stogl Robotics custom setup for nice colors and showing ROS workspace
